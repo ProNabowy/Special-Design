@@ -292,6 +292,10 @@ function keySe() {
     let teastmonials = document.querySelectorAll("header .list li a")[5];
 
     window.addEventListener("keyup" , e => {
+        if(e.key == "H" || e.key == "h") window.scrollTo( {
+            top: 0,
+            behavior: "smooth"
+        });
 
         if(e.key == "S" || e.key == "s") setting.click();
 

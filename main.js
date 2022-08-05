@@ -275,6 +275,52 @@ function resetBtn() {
 
         window.location.reload();
 
-    })
+    });
 
-}
+};
+
+// Set Keybord Setting
+
+
+function keySe() {
+
+    let setting = document.querySelector(".side-bar .icone i");
+    let about = document.querySelector("header .list li a");
+    let gallery = document.querySelectorAll("header .list li a")[2];
+    let timeLine = document.querySelectorAll("header .list li a")[3];
+    let features = document.querySelectorAll("header .list li a")[4];
+    let teastmonials = document.querySelectorAll("header .list li a")[5];
+
+    window.addEventListener("keyup" , e => {
+
+        if(e.key == "S" || e.key == "s") setting.click();
+
+        if(e.key == "A" || e.key == "a") about.click();
+
+        if(e.key == "G" || e.key == "g" ) gallery.click();
+
+        if(e.key == "T" || e.key == "t" ) timeLine.click();
+        
+        if(e.key == "F" || e.key == "f" ) features.click();
+
+        if(e.key == "M" || e.key == "m" ) teastmonials.click();
+
+    });
+
+};
+// Create function To check if user foucs on input or not
+
+function checkKeys() {
+
+    
+    window.addEventListener("mousemove" , _  => {
+        if(window.scrollY <= 3800) {
+            keySe();
+        }else {
+            false;
+        }
+    });
+
+};
+
+checkKeys();
